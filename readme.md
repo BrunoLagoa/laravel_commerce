@@ -6,22 +6,45 @@
 [![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
 [![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+<hr>
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+## poo-code-education
+Curso Laravel eCommerce - Code Education [Laravel 5.1](http://sites.code.education/laravel-inscricao-sv)
 
-## Official Documentation
+## Fase 1 do projeto
+<b>Instalando e versionando</b>
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+ - Nessa primeira fase do projeto, você deverá instalar o Laravel, mudar o namespace padrão da aplicação para CodeCommerce e versionar todos os arquivos criados no Git.
 
-## Contributing
+ - Não esqueça de testar a aplicação rodando o comando: php artisan serve
+ 
+## Fase 2 do projeto
+<b>Criando os primeiros Models</b>
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+ - Nessa fase do projeto, você deverá criar 2 models:
 
-## Security Vulnerabilities
+```
+Category
+name - varchar(80)
+description - text
+Product
+name - varchar(80)
+description - text
+price - decimal
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+ - Todos esses campos apresentados devem ser utilizados como Mass Assigment.
 
-### License
+Registre 2 rotas:
+=================
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+- admin/categories: Deve apontar para o controller AdminCategoriesController e para action index
+
+- admin/products: Deve apontar para o controller AdminProductsController e para action index
+
+```
+<b>Quando o usuário acessar qualquer uma dessas rotas, ele deverá acessar a listagem dos registros do model correspondente.</b>
+```
+
+------------------------------------------------------------------------------------------
+[Bruno Castro](http://www.bhzautomacao.com.br) - Development
