@@ -57,7 +57,9 @@ class AdminCategoriesController extends Controller
      */
     public function show($id)
     {
-        //
+        $categories = $this->categories->find($id);
+
+        return view('admin.categories', compact('categories'));
     }
 
     /**

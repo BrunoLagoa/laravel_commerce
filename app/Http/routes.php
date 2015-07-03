@@ -35,15 +35,29 @@ Route::get('produtos', ['as' => 'produtos', function(){
 
 
 Route::group(['prefix' => 'admin'], function(){
-    Route::get('categories', 'AdminCategoriesController@index');
-    Route::get('products', 'AdminProductsController@index');
+    Route::group(['prefix' => 'categories'], function(){
+        Route::get('', ['as' => 'admin.categories.index', 'uses' => 'AdminCategoriesController@index']);
+        Route::get('create', ['as' => 'admin.categories.create', 'uses' => 'AdminCategoriesController@index']);
+        Route::get('store', ['as' => 'admin.categories.store', 'uses' => 'AdminCategoriesController@index']);
+        Route::get('show/{id?}', ['as' => 'admin.categories.show', 'uses' => 'AdminCategoriesController@index']);
+        Route::get('edit/{id?}', ['as' => 'admin.categories.edit', 'uses' => 'AdminCategoriesController@index']);
+        Route::get('update/{id?}', ['as' => 'admin.categories.update', 'uses' => 'AdminCategoriesController@index']);
+        Route::get('destroy/{id?}', ['as' => 'admin.categories.destroy', 'uses' => 'AdminCategoriesController@index']);
+    });
+    Route::group(['prefix' => 'products'], function(){
+        Route::get('', ['as' => 'admin.products.index', 'uses' => 'AdminProductsController@index']);
+        Route::get('create', ['as' => 'admin.products.create', 'uses' => 'AdminProductsController@index']);
+        Route::get('store', ['as' => 'admin.products.store', 'uses' => 'AdminProductsController@index']);
+        Route::get('show/{id?}', ['as' => 'admin.products.show', 'uses' => 'AdminProductsController@index']);
+        Route::get('edit/{id?}', ['as' => 'admin.products.edit', 'uses' => 'AdminProductsController@index']);
+        Route::get('update/{id?}', ['as' => 'admin.products.update', 'uses' => 'AdminProductsController@index']);
+        Route::get('destroy/{id?}', ['as' => 'admin.products.destroy', 'uses' => 'AdminProductsController@index']);
+    });
 });
 
 
 Route::get('category/{category}', function(\CodeCommerce\Category $category){
-
     dd($category);
-
 });
 
 

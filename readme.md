@@ -46,5 +46,20 @@ Registre 2 rotas:
 <b>Quando o usuário acessar qualquer uma dessas rotas, ele deverá acessar a listagem dos registros do model correspondente.</b>
 ```
 
+## Fase 3 do projeto
+<b>Criação das rotas</b>
+
+ - Agora que você já possui os dois models criados, crie as rotas necessárias para que possamos realizar um CRUD em cada model.
+
+ - Para facilitar a administração do arquivo de rotas, as mesmas deverão ser totalmente agrupadas pelo prefixo: admin e pelo seu próprio model.
+
+```
+<b>Exemplo:</b> admin/products, admin/categories
+```
+
+<b>OBS:</b> 
+ - Enquanto nem todos os controllers e actions ainda não estão definidos, aponte as rotas para um controller e action qualquer.
+ - Todas as rotas devem possuir nome e seus parâmetros devem ser validados.
+
 ------------------------------------------------------------------------------------------
 [Bruno Castro](http://www.bhzautomacao.com.br) - Development
