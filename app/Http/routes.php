@@ -30,6 +30,11 @@ Route::get('user/{id?}', function($id = 123){
     return "Não possui ID";
 });
 
+Route::get('produtos', ['as' => 'produtos', function(){
+    echo Route::CurrentRouteName();
+    // return "Produtos";
+}]);
+
 
 
 
