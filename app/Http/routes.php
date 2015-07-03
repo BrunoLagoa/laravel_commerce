@@ -40,10 +40,21 @@ Route::group(['prefix' => 'admin'], function(){
 });
 
 
+Route::get('category/{category}', function(\CodeCommerce\Category $category){
 
+    dd($category);
+
+});
 
 
 /*
+
+Route::get('category/{id}', function($id){
+    $category = new \CodeCommerce\Category();
+    $c = $category->find($id);
+
+    return $c->name;
+});
 
 Route::get('user/{id?}', function($id = 123){
    if($id)
