@@ -14,24 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
 Route::get('exemplo', 'WelcomeController@exemplo');
-
 Route::get('home', 'HomeController@index');
 
-
-Route::pattern('id', '[0-9]+');
-
-Route::get('user/{id?}', function($id = 123){
-   if($id)
-       return "Ola $id";
-    return "Não possui ID";
-});
-
-Route::get('produtos', ['as' => 'produtos', function(){
-    echo Route::CurrentRouteName();
-    // return "Produtos";
-}]);
+Route::get('categories', 'CategoriesController@index');
 
 
 Route::group(['prefix' => 'admin'], function(){
@@ -56,12 +42,27 @@ Route::group(['prefix' => 'admin'], function(){
 });
 
 
+/*
+
+Route::get('produtos', ['as' => 'produtos', function(){
+    echo Route::CurrentRouteName();
+    // return "Produtos";
+}]);
+
+
 Route::get('category/{category}', function(\CodeCommerce\Category $category){
     dd($category);
 });
 
 
-/*
+Route::pattern('id', '[0-9]+');
+
+Route::get('user/{id?}', function($id = 123){
+   if($id)
+       return "Ola $id";
+    return "Não possui ID";
+});
+
 
 Route::get('category/{id}', function($id){
     $category = new \CodeCommerce\Category();
