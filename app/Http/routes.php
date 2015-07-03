@@ -22,3 +22,6 @@ Route::get('home', 'HomeController@index');
 Route::get('admin/categories', 'AdminCategoriesController@index');
 Route::get('admin/products', 'AdminProductsController@index');
 
+Route::match(['get','post'], 'exemplo2', function(){
+   return "oi";
+});
