@@ -18,6 +18,7 @@ Route::get('exemplo', 'WelcomeController@exemplo');
 Route::get('home', 'HomeController@index');
 
 Route::get('categories', 'CategoriesController@index');
+Route::get('categories/create', 'CategoriesController@create');
 
 
 Route::controllers([
