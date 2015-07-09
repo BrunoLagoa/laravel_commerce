@@ -20,6 +20,11 @@ Route::get('home', 'HomeController@index');
 Route::get('categories', 'CategoriesController@index');
 
 
+Route::controllers([
+    'auth' => 'Auth\AuthController',
+    'password' => 'Auth\PasswordController',
+]);
+
 Route::group(['prefix' => 'admin'], function(){
     Route::group(['prefix' => 'categories'], function(){
         Route::get('', ['as' => 'admin.categories.index', 'uses' => 'AdminCategoriesController@index']);
