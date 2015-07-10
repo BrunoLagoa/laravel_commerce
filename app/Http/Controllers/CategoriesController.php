@@ -29,7 +29,7 @@ class CategoriesController extends Controller
         return view('categories.create');
     }
 
-    public function store(Request $request)
+    public function store(Requests\CategoryRequest $request)
     {
         $input = $request->all();
 
