@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <h1>Create Categories</h1>
+        <h1>Create Products</h1>
 
         @if($errors->any())
 
@@ -14,7 +14,7 @@
 
         @endif
 
-        {!! Form::open(['url'=>'categories']) !!}
+        {!! Form::open(['url'=>'products']) !!}
 
         <div class="form-group">
 
@@ -23,12 +23,22 @@
             <br />
             {!! Form::label('description', 'Description:') !!}
             {!! Form::textarea('description', null, ['class'=>'form-control']) !!}
+            <br />
+            {!! Form::label('price', 'Price:') !!}
+            {!! Form::text('price', null, ['class'=>'form-control']) !!}
+            <br /><br />
+            {!! Form::label('featured', 'Featured:') !!}
+            {!! Form::select('featured', ['1' => 'True', '0' => 'False'], 0) !!}
+            <br /><br />
+            {!! Form::label('recommend', 'Recommend:') !!}
+            {!! Form::select('recommend', ['1' => 'True', '0' => 'False']) !!}
 
-        </div>
 
-        <div class="form-group">
+         </div>
 
-            {!! Form::submit('Add Category', ['class'=>'btn btn-primary']) !!}
+         <div class="form-group">
+
+             {!! Form::submit('Add Product', ['class'=>'btn btn-primary']) !!}
 
         </div>
 

@@ -61,5 +61,27 @@ Registre 2 rotas:
  - Enquanto nem todos os controllers e actions ainda não estão definidos, aponte as rotas para um controller e action qualquer.
  - Todas as rotas devem possuir nome e seus parâmetros devem ser validados.
 
+## Fase 4 do projeto
+<b>CRUD</b>
+
+ - Nessa fase, você deverá criar 2 CRUDs.
+ - Categories (exatamente como fizemos no vídeo)
+ - Products.
+ 
+ - No caso do CRUD de Products, devemos ter os seguintes campos:
+ 
+``` 
+ - name
+ - description
+ - price (decimal)
+ - featured (boolean) Aqui você pode criar um campo do tipo: checkbox, radio ou select
+ - recommend (boolean) Aqui você pode criar um campo do tipo: checkbox, radio ou select
+```
+
+<b>OBS:</b>
+ - Utilize o recurso de migrations para gerar a tabela "products".
+ 
+ 
+
 ------------------------------------------------------------------------------------------
 [Bruno Castro](http://www.bhzautomacao.com.br) - Development
