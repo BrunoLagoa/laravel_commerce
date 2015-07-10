@@ -8,6 +8,7 @@
                 <th>ID</th>
                 <th>Name</th>
                 <th>Description</th>
+                <th>Action</th>
             </tr>
 
             @foreach($categories as $category)
@@ -15,7 +16,9 @@
                 <td>{{ $category->id }}</td>
                 <td>{{ $category->name }}</td>
                 <td>{{ $category->description }}</td>
-                <td></td>
+                <td>
+                    <a href="{{ route('categories.destroy', ['id' => $category->id]) }}">Delete</a>
+                </td>
             </tr>
             @endforeach
         </table>
