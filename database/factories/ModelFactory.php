@@ -22,7 +22,7 @@ $factory->define(CodeCommerce\User::class, function ($faker) {
 
 $factory->define(CodeCommerce\Category::class, function ($faker) {
     return [
-        'name' => $faker->name,
+        'name' => $faker->word,
         'description' => $faker->sentence,
     ];
 });

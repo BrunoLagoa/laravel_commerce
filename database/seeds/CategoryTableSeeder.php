@@ -16,12 +16,6 @@ class CategoryTableSeeder extends Seeder
     {
         DB::table('categories')->truncate();
 
-        $faker = Faker::create();
-        foreach(range(1,15) as $i){
-        Category::create([
-            'name' => $faker->word(),
-            'description' => $faker->sentence()
-        ]);
-        }
+        factory('CodeCommerce\Category',15)->create();
     }
 }
