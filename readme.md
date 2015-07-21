@@ -42,9 +42,7 @@ Registre 2 rotas:
 
 - admin/products: Deve apontar para o controller AdminProductsController e para action index
 
-```
 <b>Quando o usuário acessar qualquer uma dessas rotas, ele deverá acessar a listagem dos registros do model correspondente.</b>
-```
 
 ## Fase 3 do projeto
 <b>Criação das rotas</b>
@@ -53,8 +51,9 @@ Registre 2 rotas:
 
  - Para facilitar a administração do arquivo de rotas, as mesmas deverão ser totalmente agrupadas pelo prefixo: admin e pelo seu próprio model.
 
+<b>Exemplo:</b>
 ```
-<b>Exemplo:</b> admin/products, admin/categories
+admin/products, admin/categories
 ```
 
 <b>OBS:</b> 
