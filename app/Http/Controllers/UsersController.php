@@ -35,7 +35,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        //
+        return view('users.create');
     }
 
     /**
@@ -46,18 +46,12 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        $input = $request->all();
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return Response
-     */
-    public function show($id)
-    {
-        //
+        $user = $this->userModel->fill($input);
+        $user->save();
+
+        return redirect()->route('users');
     }
 
     /**
@@ -68,7 +62,8 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = $this->userModel->find($id);
+        return view('users.edit', compact('user'));
     }
 
     /**
@@ -80,7 +75,8 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->userModel->findOrNew($id)->update($request->all());
+        return redirect()->route('users');
     }
 
     /**
@@ -91,6 +87,7 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $this->userModel->findOrNew($id)->delete();
+        return redirect()->route('users');
     }
 }

@@ -14,7 +14,7 @@
 
         @endif
 
-        {!! Form::open(['url'=>'categories']) !!}
+        {!! Form::open(['url'=>'admin\categories']) !!}
 
         <div class="form-group">
 
