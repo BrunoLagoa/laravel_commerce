@@ -8,13 +8,13 @@ use Illuminate\Http\Request;
 use CodeCommerce\Http\Requests;
 use CodeCommerce\Http\Controllers\Controller;
 
-class AdminUsersController extends Controller
+class UsersController extends Controller
 {
-    private $users;
+    private $userModel;
 
-    public function __construct(User $user)
+    public function __construct(User $userModel)
     {
-        $this->users = $user;
+        $this->userModel = $userModel;
     }
     /**
      * Display a listing of the resource.
@@ -23,7 +23,9 @@ class AdminUsersController extends Controller
      */
     public function index()
     {
-        //
+        $users = $this->userModel->paginate(10);
+
+        return view('users.index', compact('users'));
     }
 
     /**

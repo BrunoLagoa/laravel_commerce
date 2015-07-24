@@ -34,6 +34,7 @@
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<li><a href="{{ url('/') }}">Home</a></li>
+					<li><a href="{{ route('users') }}">Users</a></li>
 					<li><a href="{{ route('categories') }}">Categories</a></li>
 					<li><a href="{{ route('products') }}">Produts</a></li>
 				</ul>

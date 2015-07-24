@@ -37,12 +37,12 @@ Route::group(['prefix' => 'products'], function() {
 });
 
 Route::group(['prefix' => 'users'], function() {
-    Route::get('', ['as' => 'products', 'uses' => 'ProductsController@index']);
-    Route::post('', ['as' => 'products.store', 'uses' => 'ProductsController@store']);
-    Route::get('create', ['as' => 'products.create', 'uses' => 'ProductsController@create']);
-    Route::get('{id}/destroy', ['as' => 'products.destroy', 'uses' => 'ProductsController@destroy']);
-    Route::get('{id}/edit', ['as' => 'products.edit', 'uses' => 'ProductsController@edit']);
-    Route::put('{id}/update', ['as' => 'products.update', 'uses' => 'ProductsController@update']);
+    Route::get('', ['as' => 'users', 'uses' => 'UsersController@index']);
+    Route::post('', ['as' => 'users.store', 'uses' => 'UsersController@store']);
+    Route::get('create', ['as' => 'users.create', 'uses' => 'UsersController@create']);
+    Route::get('{id}/destroy', ['as' => 'users.destroy', 'uses' => 'UsersController@destroy']);
+    Route::get('{id}/edit', ['as' => 'users.edit', 'uses' => 'UsersController@edit']);
+    Route::put('{id}/update', ['as' => 'users.update', 'uses' => 'UsersController@update']);
 });
 
 
