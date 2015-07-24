@@ -18,18 +18,27 @@
 
         <div class="form-group">
 
+            {!! Form::label('category', 'Category:') !!}
+            {!! Form::select('category_id', $categories, null, ['class'=>'form-control']) !!}
+        </div>
+        <div class="form-group">
+
             {!! Form::label('name', 'Name:') !!}
             {!! Form::text('name', null, ['class'=>'form-control']) !!}
-            <br />
+        </div>
+        <div class="form-group">
             {!! Form::label('description', 'Description:') !!}
             {!! Form::textarea('description', null, ['class'=>'form-control']) !!}
-            <br />
+        </div>
+        <div class="form-group">
             {!! Form::label('price', 'Price:') !!}
             {!! Form::text('price', null, ['class'=>'form-control']) !!}
-            <br /><br />
+        </div>
+        <div class="form-group">
             {!! Form::label('featured', 'Featured:') !!}
             {!! Form::select('featured', ['1' => 'True', '0' => 'False'], 0) !!}
-            <br /><br />
+        </div>
+        <div class="form-group">
             {!! Form::label('recommend', 'Recommend:') !!}
             {!! Form::select('recommend', ['1' => 'True', '0' => 'False']) !!}
 
