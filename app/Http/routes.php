@@ -38,6 +38,8 @@ Route::group(['prefix' => 'admin', 'where' => ['id' => '[0-9]+']], function() {
 
         Route::group(['prefix' => 'images'], function() {
             Route::get('{id}/product',['as' => 'products.images', 'uses' => 'ProductsController@images']);
+            Route::get('create/{id}/product',['as' => 'products.images.create', 'uses' => 'ProductsController@createImages']);
+            Route::post('store/{id}/product',['as' => 'products.images.store', 'uses' => 'ProductsController@storeImages']);
         });
     });
 
