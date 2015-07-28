@@ -18,7 +18,7 @@ class ProductsController extends Controller
 
     public function index()
     {
-        $products = $this->productModel->paginate(10);
+        $products = $this->productModel->orderBy('id', 'DESC')->paginate(10);
 
         return view('products.index', compact('products'));
     }

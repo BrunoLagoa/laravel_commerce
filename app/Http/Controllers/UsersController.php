@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 use CodeCommerce\Http\Requests;
 use CodeCommerce\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
 
 class UsersController extends Controller
 {
@@ -47,6 +48,7 @@ class UsersController extends Controller
     public function store(Request $request)
     {
         $input = $request->all();
+        $input['password'] = Hash::make($input['password']);
 
         $user = $this->userModel->fill($input);
         $user->save();

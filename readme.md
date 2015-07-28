@@ -80,7 +80,15 @@ admin/products, admin/categories
 <b>OBS:</b>
  - Utilize o recurso de migrations para gerar a tabela "products".
  
- 
+## Fase 5 do projeto
+<b>RELACIONAMENTO</b>
+
+ - Essa fase do projeto é bem simples.
+ - Você apenas deverá criar o relacionamento entre os Models, exatamente como fiz nesse capítulo.
+ - Também, você deverá implementar a paginação em todos os CRUDs.
+
+<b>OBS:</b>
+ - Não se esqueça de checar se suas rotas estão seguindo o mesmo padrão que estou utilizando.
 
 ------------------------------------------------------------------------------------------
 [Bruno Castro](http://www.bhzautomacao.com.br) - Development
