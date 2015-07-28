@@ -70,13 +70,13 @@ class ProductsController extends Controller
         return view('products.images', compact('product'));
     }
 
-    public function createImages($id)
+    public function createImage($id)
     {
         $product = $this->productModel->find($id);
         return view('products.create_image', compact('product'));
     }
 
-    public function storeImages(Request $requests, $id, ProductImage $productImage)
+    public function storeImage(Requests\ProductImageRequest $requests, $id, ProductImage $productImage)
     {
         $file = $requests->file('image');
         $extension = $file->getClientOriginalExtension();
@@ -86,5 +86,21 @@ class ProductsController extends Controller
         Storage::disk('public_local')->put($image->id.'.'.$extension, File::get($file));
 
         return redirect()->route('products.images',['id'=>$id]);
+    }
+
+    public function destroyImage(ProductImage $productImage, $id)
+    {
+        $image = $productImage->find($id);
+
+        if(file_exists(public_path().'/uploads/'.$image->id.'.'.$image->extension))
+        {
+            Storage::disk('public_local')->delete($image->id.'.'.$image->extension);
+        }
+
+        $product = $image->product;
+        $image->delete();
+
+        return redirect()->route('products.images', ['id'=>$product->id]);
+
     }
 }
