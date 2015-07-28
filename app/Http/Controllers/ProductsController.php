@@ -59,4 +59,12 @@ class ProductsController extends Controller
         $this->productModel->findOrNew($id)->delete();
         return redirect()->route('products');
     }
+
+    public function images($id)
+    {
+        $product = $this->productModel->find($id);
+
+        return view('products.images', compact('product'));
+
+    }
 }
