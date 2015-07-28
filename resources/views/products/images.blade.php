@@ -19,6 +19,7 @@
                 <td>{{ $image->id }}</td>
                 <td></td>
                 <td>{{ $image->extension }}</td>
+                <td></td>
             </tr>
             @endforeach
         </table>
