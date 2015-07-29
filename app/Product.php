@@ -24,4 +24,9 @@ class Product extends Model
     {
         return $this->belongsTo('CodeCommerce\Category');
     }
+
+    public function tags()
+    {
+        return $this->belongsToMany('CodeCommerce\Tag');
+    }
 }
