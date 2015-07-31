@@ -7,7 +7,6 @@ use CodeCommerce\Category;
 use CodeCommerce\Http\Requests;
 use CodeCommerce\Product;
 use CodeCommerce\ProductImage;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 
@@ -60,7 +59,16 @@ class ProductsController extends Controller
 
     public function destroy($id)
     {
-        $this->productModel->findOrNew($id)->delete();
+        $product = $this->productModel->find($id);
+
+        if($product)
+        {
+            if($product->images)
+            {
+                $product->images->delete();
+            }
+            $product->delete();
+        }
         return redirect()->route('products');
     }
 
