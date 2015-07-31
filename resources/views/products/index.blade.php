@@ -28,9 +28,9 @@
                 <td>{{ $product->recommend == 1 ? 'Yes' : 'No' }}</td>
                 <td>{{ $product->category->name }}</td>
                 <td>
-                    <a href="{{ route('products.edit', ['id' => $product->id]) }}">Edit</a> |
-                    <a href="{{ route('products.images', ['id' => $product->id]) }}">Images</a> |
-                    <a href="{{ route('products.destroy', ['id' => $product->id]) }}">Delete</a>
+                    <a href="{{ route('products.edit', ['id' => $product->id]) }}" class="btn btn-warning btn-sm">Edit</a>
+                    <a href="{{ route('products.images', ['id' => $product->id]) }}" class="btn btn-primary btn-sm">Images</a>
+                    <a href="{{ route('products.destroy', ['id' => $product->id]) }}"  class="btn btn-danger btn-sm">Delete</a>
                 </td>
             </tr>
             @endforeach

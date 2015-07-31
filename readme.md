@@ -15,7 +15,6 @@ Curso Laravel eCommerce - Code Education [Laravel 5.1](http://sites.code.educati
 <b>Instalando e versionando</b>
 
  - Nessa primeira fase do projeto, você deverá instalar o Laravel, mudar o namespace padrão da aplicação para CodeCommerce e versionar todos os arquivos criados no Git.
-
  - Não esqueça de testar a aplicação rodando o comando: php artisan serve
  
 ## Fase 2 do projeto
@@ -35,20 +34,16 @@ price - decimal
 
  - Todos esses campos apresentados devem ser utilizados como Mass Assigment.
 
-Registre 2 rotas:
-=================
+## Registre 2 rotas:
 
 - admin/categories: Deve apontar para o controller AdminCategoriesController e para action index
-
 - admin/products: Deve apontar para o controller AdminProductsController e para action index
-
 <b>Quando o usuário acessar qualquer uma dessas rotas, ele deverá acessar a listagem dos registros do model correspondente.</b>
 
 ## Fase 3 do projeto
 <b>Criação das rotas</b>
 
  - Agora que você já possui os dois models criados, crie as rotas necessárias para que possamos realizar um CRUD em cada model.
-
  - Para facilitar a administração do arquivo de rotas, as mesmas deverão ser totalmente agrupadas pelo prefixo: admin e pelo seu próprio model.
 
 <b>Exemplo:</b>
@@ -66,7 +61,6 @@ admin/products, admin/categories
  - Nessa fase, você deverá criar 2 CRUDs.
  - Categories (exatamente como fizemos no vídeo)
  - Products.
- 
  - No caso do CRUD de Products, devemos ter os seguintes campos:
  
 ``` 
