@@ -65,7 +65,13 @@ class ProductsController extends Controller
         {
             if($product->images)
             {
-                $product->images->delete();
+                foreach($product->images as $image){
+                    if(file_exists(public_path().'/uploads/'.$image->id.'.'.$image->extension))
+                    {
+                        Storage::disk('public_local')->delete($image->id.'.'.$image->extension);
+                    }
+                    $image->delete();
+                }
             }
             $product->delete();
         }

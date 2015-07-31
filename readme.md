@@ -89,6 +89,16 @@ admin/products, admin/categories
 
 <b>OBS:</b>
  - Não se esqueça de checar se suas rotas estão seguindo o mesmo padrão que estou utilizando.
+ 
+## Fase 6 do projeto
+<b>UPLOAD DE IMAGENS</b>
+ 
+ - Essa etapa é bastante simples.
+ - Você simplesmente precisa repetir exatamente o processo de cadastro de imagens de produtos com upload.
+ - Por outro lado, gostaria que você também testasse o processo de upload utilizando a Amazon S3. Ok?
+ 
+<b>OBS:</b>
+ - Você tem que criar uma maneira de que quando apagar um produto (destroy), se ele tiver imagens, apagar os arquivos das imagens também.
 
 ------------------------------------------------------------------------------------------
 [Bruno Castro](http://www.bhzautomacao.com.br) - Development
