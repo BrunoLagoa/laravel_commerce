@@ -41,9 +41,11 @@
         <div class="form-group">
             {!! Form::label('recommend', 'Recommend:') !!}
             {!! Form::select('recommend', ['1' => 'True', '0' => 'False']) !!}
-
-
-         </div>
+        </div>
+        <div class="form-group">
+            {!! Form::label('tags', 'TAGs:') !!}
+            {!! Form::textarea('tags', null, ['class'=>'form-control']) !!}
+        </div>
 
          <div class="form-group">
 

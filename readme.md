@@ -93,6 +93,14 @@ admin/products, admin/categories
  
 <b>OBS:</b>
  - Você tem que criar uma maneira de que quando apagar um produto (destroy), se ele tiver imagens, apagar os arquivos das imagens também.
+ 
+## Fase 7 do projeto
+<b>TAGS</b>
+ 
+ - Agora que você já aprendeu a trabalhar com relacionamentos ManyToMany, adicione ao formulário de Criação / Edicação de produtos, a opção de setar tags para determinado produto em um textarea (entre vírgulas).
+ 
+<b>OBS:</b>
+ - Uma tag já adicionada na tabela de tags não pode ter o registro repetido, ou seja, não pode ter duas categorias "notebooks" na tabela tags.
 
 ------------------------------------------------------------------------------------------
 [Bruno Castro](http://www.bhzautomacao.com.br) - Development

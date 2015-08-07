@@ -41,6 +41,10 @@
             {!! Form::label('recommend', 'Recommend:') !!}
             {!! Form::select('recommend', ['1' => 'True', '0' => 'False'], $product->featured) !!}
         </div>
+        <div class="form-group">
+            {!! Form::label('tags', 'TAGs:') !!}
+            {!! Form::textarea('tags', $product->tagList, ['class'=>'form-control']) !!}
+        </div>
 
         <div class="form-group">
 
