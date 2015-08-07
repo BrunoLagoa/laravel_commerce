@@ -42,7 +42,7 @@ class ProductsController extends Controller
         $inputTags = array_map('trim', explode(',', $request->get('tags')));
         $this->storeTag($inputTags,$product->id);
 
-        return redirect()->route('products');
+        return redirect()->route('products')->with('product_store', 'Product create!');
     }
 
     public function edit($id, Category $category)
@@ -60,7 +60,7 @@ class ProductsController extends Controller
         $input = array_map('trim', explode(',', $request->get('tags')));
         $this->storeTag($input,$id);
 
-        return redirect()->route('products');
+        return redirect()->route('products')->with('product_update', 'Product updated!');
     }
 
     public function destroy($id)
