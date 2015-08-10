@@ -89,8 +89,6 @@ class ProductsController extends Controller
     {
         $tag = new Tag();
 
-        $countTags = count($inputTags);
-
         foreach ($inputTags as $key => $value) {
             $newTag = $tag->firstOrCreate(["name" => $value]);
             $idTags[] = $newTag->id;

@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'StoreController@index');
 Route::get('exemplo', 'WelcomeController@exemplo');
 Route::get('home', 'HomeController@index');
 
