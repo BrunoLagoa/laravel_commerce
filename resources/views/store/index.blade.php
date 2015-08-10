@@ -14,7 +14,13 @@
                 <div class="product-image-wrapper">
                     <div class="single-products">
                         <div class="productinfo text-center">
-                            <img src="http://commerce.dev:10088/uploads/10.jpg" alt="" />
+
+                            @if(count($product->images))
+                                <img src="{{ url('uploads/'.$product->images->first()->id.'.'.$product->images->first()->extension) }}" alt="" width="200px" />
+                            @else
+                                <img src="{{ url('images/no-img.jpg') }}" alt="" width="200px" />
+                            @endif
+
                             <h2>R$ {{ $product->price }}</h2>
                             <p>{{ $product->name }}</p>
                             <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-crosshairs"></i>Mais detalhes</a>
