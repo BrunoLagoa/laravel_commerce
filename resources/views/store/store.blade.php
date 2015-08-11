@@ -7,8 +7,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Home | E-Shop</title>
-    
-    <link href="{{ asset('/css/all.css') }}" rel="stylesheet">
+
+    <link href="{{ elixir('css/all.css') }}" rel="stylesheet">
 
 </head><!--/head-->
 
@@ -140,11 +140,7 @@
 
 
 
-<script src="{{ asset('/js/jquery.js') }}"></script>
-<script src="{{ asset('/js/bootstrap.min.js') }}"></script>
-<script src="{{ asset('/js/jquery.scrollUp.min.js') }}"></script>
-<script src="{{ asset('/js/jquery.prettyPhoto.js') }}"></script>
-<script src="{{ asset('/js/main.js') }}"></script>
+<script src="{{ elixir('js/all.js') }}"></script>
 
 </body>
 </html>
