@@ -38,6 +38,12 @@ class StoreController extends Controller
 
         $categories = Category::all();
 
-        return view('store.products_category', compact('categories','category','pCategory'));
+        if($category)
+        {
+            return view('store.products_category', compact('categories','category','pCategory'));
+        }
+
+        return redirect()->route('store.index')->with('category_exist', 'Category not exist!');
+
     }
 }
