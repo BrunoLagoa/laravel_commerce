@@ -44,12 +44,12 @@ class Product extends Model
 
     public function scopeFeatured($query)
     {
-        return $query->where('featured','=',1)->limit(3);
+        return $query->where('featured', '=', 1)->orderBy(DB::raw('RANDOM()'))->limit(3);
     }
 
     public function scopeRecommend($query)
     {
-        return $query->where('recommend','=',1)->limit(3);
+        return $query->where('recommend','=',1)->orderBy(DB::raw('RANDOM()'))->limit(3);
     }
     public function scopeCategory($query)
     {
