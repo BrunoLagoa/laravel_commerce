@@ -12,7 +12,7 @@
                 @include('store.partial.products')
             @else
                 <div class="alert alert-warning">
-                    Nenhum produto cadastrado.
+                    Nenhum produto cadastrado. Não
                 </div>
             @endif
         </div><!--features_items-->
