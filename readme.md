@@ -101,6 +101,17 @@ admin/products, admin/categories
  
 <b>OBS:</b>
  - Uma tag já adicionada na tabela de tags não pode ter o registro repetido, ou seja, não pode ter duas categorias "notebooks" na tabela tags.
+ 
+## Fase 8 do projeto
+<b>LOJA</b>
+ 
+ Agora que você já possui a base para gerar a home da Loja, você precisa:
+ 
+ - Listar os produtos em desta
+ - Listar os produtos recomendados
+ 
+<b>OBS:</b>
+ - Quando clicarmos em um item da categoria, deveremos exibir apenas os produtos de uma determinada categoria.
 
 ------------------------------------------------------------------------------------------
 [Bruno Castro](http://www.bhzautomacao.com.br) - Development

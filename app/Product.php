@@ -45,4 +45,17 @@ class Product extends Model
     {
         return $query->where('featured','=',1)->limit(3);
     }
+
+    public function scopeRecommend($query)
+    {
+        return $query->where('recommend','=',1)->limit(3);
+    }
+    public function scopeCategory($query)
+    {
+        return $query->where('recommend','=',1)->limit(3);
+    }
+    public function scopeProductCategory($query, $id)
+    {
+        return $query->whereCategoryId($id);
+    }
 }
