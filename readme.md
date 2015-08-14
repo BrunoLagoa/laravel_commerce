@@ -34,7 +34,7 @@ price - decimal
 
  - Todos esses campos apresentados devem ser utilizados como Mass Assigment.
 
-## Registre 2 rotas:
+<h3>Registre 2 rotas:</h3>
 
 - admin/categories: Deve apontar para o controller AdminCategoriesController e para action index
 - admin/products: Deve apontar para o controller AdminProductsController e para action index
@@ -73,8 +73,19 @@ admin/products, admin/categories
 
 <b>OBS:</b>
  - Utilize o recurso de migrations para gerar a tabela "products".
- 
+
 ## Fase 5 do projeto
+<b>SEEDING</b>
+
+ - Nessa fase, você deverá adicionar dados Fakes nas seguintes entidades:
+
+``` 
+ - User   
+ - Category   
+ - Product
+``` 
+ 
+## Fase 6 do projeto
 <b>RELACIONAMENTO</b>
 
  - Essa fase do projeto é bem simples.
@@ -84,7 +95,7 @@ admin/products, admin/categories
 <b>OBS:</b>
  - Não se esqueça de checar se suas rotas estão seguindo o mesmo padrão que estou utilizando.
  
-## Fase 6 do projeto
+## Fase 7 do projeto
 <b>UPLOAD DE IMAGENS</b>
  
  - Essa etapa é bastante simples.
@@ -94,7 +105,7 @@ admin/products, admin/categories
 <b>OBS:</b>
  - Você tem que criar uma maneira de que quando apagar um produto (destroy), se ele tiver imagens, apagar os arquivos das imagens também.
  
-## Fase 7 do projeto
+## Fase 8 do projeto
 <b>TAGS</b>
  
  - Agora que você já aprendeu a trabalhar com relacionamentos ManyToMany, adicione ao formulário de Criação / Edicação de produtos, a opção de setar tags para determinado produto em um textarea (entre vírgulas).
@@ -102,7 +113,7 @@ admin/products, admin/categories
 <b>OBS:</b>
  - Uma tag já adicionada na tabela de tags não pode ter o registro repetido, ou seja, não pode ter duas categorias "notebooks" na tabela tags.
  
-## Fase 8 do projeto
+## Fase 9 do projeto
 <b>LOJA</b>
  
  Agora que você já possui a base para gerar a home da Loja, você precisa:
@@ -113,12 +124,12 @@ admin/products, admin/categories
 <b>OBS:</b>
  - Quando clicarmos em um item da categoria, deveremos exibir apenas os produtos de uma determinada categoria.
 
-## Fase 9 do projeto
+## Fase 10 do projeto
 <b>ASSETS</b>
  
  - Repita exatamente o aprendido nesse capítulo para que você possa gerenciar seus assets utilizando o Elixir.
  
-## Fase 10 do projeto
+## Fase 11 do projeto
 <b>PRODUTOS COM TAGs</b>
  
  - Nessa fase do projeto, você deverá repetir exatamente o que você aprendeu nesse capítulo.   
