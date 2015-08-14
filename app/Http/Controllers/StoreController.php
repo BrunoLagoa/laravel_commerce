@@ -39,6 +39,14 @@ class StoreController extends Controller
         return view('store.category', compact('categories','products','category'));
     }
 
+    public function product($id)
+    {
+        $categories = Category::all();
+        $product = Product::find($id);
+
+        return view('store.product', compact('categories','product'));
+    }
+
     public function productCategory($id)
     {
         $pCategory = Product::ProductCategory($id)->get();
