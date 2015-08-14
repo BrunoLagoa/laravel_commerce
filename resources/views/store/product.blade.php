@@ -30,16 +30,22 @@
             </div>
             <div class="col-sm-7">
                 <div class="product-information"><!--/product-information-->
-
                     <h2>{{ $product->name }}</h2>
                     <p>{{ $product->description }}</p>
-                                <span>
-                                    <span>R$ {{ number_format($product->price,2,",",".") }}</span>
-                                        <a href="#" class="btn btn-fefault cart">
-                                            <i class="fa fa-shopping-cart"></i>
-                                            Adicionar no Carrinho
-                                        </a>
-                                </span>
+                    <span>
+                        <span>R$ {{ number_format($product->price,2,",",".") }}</span>
+                            <a href="#" class="btn btn-fefault cart">
+                                <i class="fa fa-shopping-cart"></i>
+                                Adicionar no Carrinho
+                            </a>
+                    </span>
+                </div>
+                <hr>
+                <div class="col-sm-7">
+                    Tags:
+                    @foreach($product->tags as $tag)
+                        <a href="{{ route('store.tag', $tag->id) }}" class="btn btn-fefault cart">{{ $tag->name }}</a>
+                    @endforeach
                 </div>
                 <!--/product-information-->
             </div>

@@ -117,6 +117,12 @@ admin/products, admin/categories
 <b>ASSETS</b>
  
  - Repita exatamente o aprendido nesse capítulo para que você possa gerenciar seus assets utilizando o Elixir.
+ 
+## Fase 10 do projeto
+<b>PRODUTOS COM TAGs</b>
+ 
+ - Nessa fase do projeto, você deverá repetir exatamente o que você aprendeu nesse capítulo.   
+ - Você também deverá exibir as tags de um determinado produto, no momento da exibição do mesmo na loja. Cada tag deverá ter um link que, quando clicado, deverá encaminhar o usuário para uma página onde teremos a listagem de todos os produtos associados a tag correspondente.
 
 ------------------------------------------------------------------------------------------
 [Bruno Castro](http://www.bhzautomacao.com.br) - Development

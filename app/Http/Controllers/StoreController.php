@@ -14,11 +14,13 @@ class StoreController extends Controller
 {
     private $category;
     private $product;
+    private $tag;
 
-    function __construct(Category $category, Product $product)
+    function __construct(Category $category, Product $product, Tag $tag)
     {
         $this->category = $category;
         $this->product = $product;
+        $this->tag = $tag;
     }
 
     public function index()
@@ -45,6 +47,14 @@ class StoreController extends Controller
         $product = Product::find($id);
 
         return view('store.product', compact('categories','product'));
+    }
+
+    public function tag($id)
+    {
+        $tag = $this->tag->find($id);
+        $categories = $this->category->all();
+
+        return view('store.tag', compact('categories','tag'));
     }
 
     public function productCategory($id)

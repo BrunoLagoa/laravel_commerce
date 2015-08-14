@@ -51,10 +51,12 @@ class Product extends Model
     {
         return $query->where('recommend','=',1)->orderBy(DB::raw('RANDOM()'))->limit(3);
     }
+
     public function scopeCategory($query)
     {
         return $query->where('recommend','=',1)->limit(3);
     }
+
     public function scopeOfCategory($query, $type)
     {
         return $query->where('category_id', '=', $type);
