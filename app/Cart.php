@@ -20,6 +20,7 @@ class Cart
                 'name' => $name
             ]
         ];
+        return $this->items;
     }
 
     public function remove($id)
