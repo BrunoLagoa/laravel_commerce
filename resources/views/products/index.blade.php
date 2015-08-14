@@ -47,8 +47,8 @@
             @foreach($products as $product)
             <tr>
                 <td>{{ $product->id }}</td>
-                <td>{{ $product->name }}</td>
-                <td>{{ str_limit($product->description, $limit = 100, $end = '...') }}</td>
+                <td>{{ str_limit($product->name, $limit = 30, $end = '...') }}</td>
+                <td>{{ str_limit($product->description, $limit = 40, $end = '...') }}</td>
                 <td>{{ number_format($product->price, 2,',','.') }}</td>
                 <td>{{ $product->featured == 1 ? 'Yes' : 'No' }}</td>
                 <td>{{ $product->recommend == 1 ? 'Yes' : 'No' }}</td>

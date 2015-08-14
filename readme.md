@@ -113,5 +113,10 @@ admin/products, admin/categories
 <b>OBS:</b>
  - Quando clicarmos em um item da categoria, deveremos exibir apenas os produtos de uma determinada categoria.
 
+## Fase 9 do projeto
+<b>ASSETS</b>
+ 
+ - Repita exatamente o aprendido nesse capítulo para que você possa gerenciar seus assets utilizando o Elixir.
+
 ------------------------------------------------------------------------------------------
 [Bruno Castro](http://www.bhzautomacao.com.br) - Development

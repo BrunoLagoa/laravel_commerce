@@ -1,4 +1,4 @@
-@foreach($pCategory as $product)
+@foreach($products as $product)
     <div class="col-sm-4">
         <div class="product-image-wrapper">
             <div class="single-products">

@@ -23,12 +23,12 @@ elixir(function(mix) {
  ], 'public/css/all.css');
 
  mix.scripts([
-  'jquery.js',
-  'bootstrap.min.js',
-  'jquery.scrollUp.min.js',
-  'price-range.js',
-  'jquery.prettyPhoto.js',
-  'main.js'
+      'jquery.js',
+      'bootstrap.min.js',
+      'jquery.scrollUp.min.js',
+      'price-range.js',
+      'jquery.prettyPhoto.js',
+      'main.js'
  ], 'public/js/all.js');
 
  mix.version(['css/all.css','js/all.js']);
