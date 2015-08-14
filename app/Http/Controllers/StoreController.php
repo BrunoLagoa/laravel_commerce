@@ -30,19 +30,25 @@ class StoreController extends Controller
         return view('store.index', compact('categories','pFeatured','pRecommend'));
     }
 
+    public function category($id)
+    {
+        $categories = Category::all();
+        $category = Category::find($id);
+        $products = Product::ofCategory($id)->get();
+
+        return view('store.category', compact('categories','products','category'));
+    }
+
     public function productCategory($id)
     {
         $pCategory = Product::ProductCategory($id)->get();
         $category = $this->category->find($id);
-
         $categories = Category::all();
 
         if($category)
         {
-            return view('store.products_category', compact('categories','category','pCategory'));
+            return view('store.category', compact('categories','products','pCategory'));
         }
-
         return redirect()->route('store.index')->with('category_exist', 'Category not exist!');
-
     }
 }
