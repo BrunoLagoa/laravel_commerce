@@ -15,6 +15,7 @@ Route::group(['prefix' => ''], function () {
     Route::get('category/{id}', ['as' => 'store.category', 'uses' => 'StoreController@category']);
     Route::get('product/{id}', ['as' => 'store.product', 'uses' => 'StoreController@product']);
     Route::get('tag/{id}', ['as' => 'store.tag', 'uses' => 'StoreController@tag']);
+    Route::get('cart', ['as' => 'cart', 'uses' => 'CartController@index']);
 });
 
 

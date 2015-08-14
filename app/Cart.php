@@ -2,7 +2,7 @@
 
 namespace CodeCommerce;
 
-class Cart extends Model
+class Cart
 {
     private $items;
 

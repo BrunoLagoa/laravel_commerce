@@ -34,7 +34,7 @@ price - decimal
 
  - Todos esses campos apresentados devem ser utilizados como Mass Assigment.
 
-<h3>Registre 2 rotas:</h3>
+<b>Registre 2 rotas:</b>
 
 - admin/categories: Deve apontar para o controller AdminCategoriesController e para action index
 - admin/products: Deve apontar para o controller AdminProductsController e para action index
