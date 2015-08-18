@@ -27,7 +27,7 @@ Route::group(['prefix' => ''], function () {
 Route::get('home', 'HomeController@index');
 
 
-Route::group(['prefix' => 'admin', 'where' => ['id' => '[0-9]+']], function() {
+Route::group(['prefix' => 'admin', 'middleware'=>'auth', 'where' => ['id' => '[0-9]+']], function() {
     Route::group(['prefix' => 'categories'], function() {
         Route::get('', ['as' => 'categories', 'uses' => 'CategoriesController@index']);
         Route::post('', ['as' => 'categories.store', 'uses' => 'CategoriesController@store']);
