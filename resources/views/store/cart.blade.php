@@ -3,6 +3,7 @@
 @section('content')
     <section id="cart_items">
         <div class="container">
+
             <div class="table-condensed cart_info">
                 <table class="table table-condensed">
                     <thead>
@@ -45,6 +46,7 @@
                     </tbody>
                 </table>
             </div>
+
         </div>
     </section>
 @stop

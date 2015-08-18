@@ -22,7 +22,7 @@ class CartController extends Controller
     public function index()
     {
         if (!Session::has('cart')) {
-            Session::set('cart', $this->cart);
+            $cart = Session::set('cart', $this->cart);
         }
         return view('store.cart', ['cart' => Session::get('cart')]);
     }
