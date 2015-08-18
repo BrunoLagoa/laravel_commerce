@@ -33,7 +33,12 @@
                                 R$ {{ number_format($item['price'],2,",",".") }}
                             </td>
                             <td class="cart_quantity">
-                                {{ $item['qtd'] }}
+                                {!! Form::open(['route' => ['cart.update', 'id' => $k], 'method' => 'post', 'class' => 'form-inline']) !!}
+                                <div class="form-group">
+                                    {!! Form::text('qtd', $item['qtd'], ['class' => 'form-control']) !!}
+                                </div>
+                                {!! Form::submit('Alterar Qtd', ['class' => 'btn btn-success']) !!}
+                                {!! Form::close() !!}
                             </td>
                             <td class="cart_total">
                                 <p class="cart_total_price">R$ {{ number_format($item['price'] * $item['qtd'],2,",",".") }}</p>
@@ -53,7 +58,7 @@
                             <td colspan="6">
                                 <div class="pull-right">
                                     <span style="margin-right: 100px">
-                                        TOTAL: R$ {{ $cart->getTotal() }}
+                                        TOTAL: R$ {{ number_format($cart->getTotal(),2,",",".") }}
                                     </span>
                                     <a href="#" class="btn btn-success">Finalizar Compra</a>
                                 </div>

@@ -23,6 +23,18 @@ class Cart
         return $this->items;
     }
 
+    public function update($id, $name, $price, $qtd)
+    {
+        $this->items += [
+            $id => [
+                'qtd' => $this->items[$id]['qtd'] = $qtd,
+                'price' => $price,
+                'name' => $name,
+            ]
+        ];
+        return $this->items;
+    }
+
     public function remove($id)
     {
         unset($this->items[$id]);

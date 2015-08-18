@@ -135,5 +135,11 @@ admin/products, admin/categories
  - Nessa fase do projeto, você deverá repetir exatamente o que você aprendeu nesse capítulo.   
  - Você também deverá exibir as tags de um determinado produto, no momento da exibição do mesmo na loja. Cada tag deverá ter um link que, quando clicado, deverá encaminhar o usuário para uma página onde teremos a listagem de todos os produtos associados a tag correspondente.
 
+## Fase 12 do projeto
+<b>CART</b>
+ 
+ - Nessa fase do projeto, você deverá criar o carrinho de compras como demonstrado, porém, no próprio carrinho, você deverá adicionar uma opção para que possamos alterar a quantidade de um determinado produto.
+ - Fique livre para utilizar javascript (ou não), para que possamos realizar uma requisição de atualização no carrinho em relação a quantidade de um produto.  
+
 ------------------------------------------------------------------------------------------
 [Bruno Castro](http://www.bhzautomacao.com.br) - Development
