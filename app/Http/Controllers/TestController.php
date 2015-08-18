@@ -17,6 +17,9 @@ class TestController extends Controller
             'password' => 123456
         ];
 
+        //dd(Auth::user());
+        return Auth::user();
+
         // attempt faz o login do usuario
         if(Auth::attempt($data)) {
             return "Logou";
