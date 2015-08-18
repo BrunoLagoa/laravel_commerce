@@ -4,7 +4,7 @@
     <section id="cart_items">
         <div class="container">
             @if($cart->getTotal() == 0)
-                <div class="alert alert-warning">
+                <div class="alert alert-warning" style="margin-bottom: 50px">
                     Nenhum produto cadastrado.
                 </div>
             @else
