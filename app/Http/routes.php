@@ -23,7 +23,7 @@ Route::group(['prefix' => ''], function () {
 });
 
 
-Route::get('exemplo', 'WelcomeController@exemplo');
+//Route::get('exemplo', 'WelcomeController@exemplo');
 Route::get('home', 'HomeController@index');
 
 
@@ -69,6 +69,7 @@ Route::group(['prefix' => 'admin', 'where' => ['id' => '[0-9]+']], function() {
 Route::controllers([
     'auth' => 'Auth\AuthController',
     'password' => 'Auth\PasswordController',
+    'test' => 'TestController'
 ]);
 
 
