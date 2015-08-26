@@ -20,7 +20,7 @@
                 <div class="col-sm-6">
                     <div class="contactinfo">
                         <ul class="nav nav-pills">
-                            <li><a href="#"><i class="fa fa-phone"></i> (19) 5555-5555</a></li>
+                            <li><a href="#"><i class="fa fa-phone"></i> (31) 5555-5555</a></li>
                             <li><a href="#"><i class="fa fa-envelope"></i> atendimento@schoolofnet.com</a></li>
                         </ul>
                     </div>
@@ -50,7 +50,7 @@
                 <div class="col-sm-8">
                     <div class="shop-menu pull-right">
                         <ul class="nav navbar-nav">
-                            <li><a href="#"><i class="fa fa-user"></i> Minha conta</a></li>
+                            <li><a href="{{ route('account.orders') }}"><i class="fa fa-user"></i> Minha conta</a></li>
                             <li><a href="http://commerce.dev:10088/checkout"><i class="fa fa-crosshairs"></i> Checkout</a></li>
                             <li><a href="{{ route('cart') }}"><i class="fa fa-shopping-cart"></i> Carrinho</a></li>
                             @if (Auth::guest())
