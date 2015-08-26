@@ -39,7 +39,7 @@
         </div>
         <div class="form-group">
             {!! Form::label('recommend', 'Recommend:') !!}
-            {!! Form::select('recommend', ['1' => 'True', '0' => 'False'], $product->featured) !!}
+            {!! Form::select('recommend', ['1' => 'True', '0' => 'False'], $product->recommend) !!}
         </div>
         <div class="form-group">
             {!! Form::label('tags', 'TAGs:') !!}

@@ -31,6 +31,11 @@
         </div>
 
         <div class="form-group">
+            {!! Form::label('is_admin', 'Permission:') !!}
+            {!! Form::select('is_admin', ['1' => 'Administrador', '0' => 'Usuário'], $user->id, ['class'=>'form-control']) !!}
+        </div>
+
+        <div class="form-group">
 
             {!! Form::submit('Save User', ['class'=>'btn btn-primary']) !!}
 

@@ -17,17 +17,18 @@ class CheckoutController extends Controller
     {
         $this->middleware('auth');
     }
+
     public function place(Order $orderModel, OrderItem $orderItem)
     {
-        if(!Session::has('cart')) {
+        if (!Session::has('cart')) {
             return false;
         }
 
         $cart = Session::get('cart');
 
-        if($cart->getTotal() > 0) {
+        if ($cart->getTotal() > 0) {
 
-            $order = $orderModel->create(['user_id'=> Auth::user()->id, 'total'=>$cart->getTotal()]);
+            $order = $orderModel->create(['user_id' => Auth::user()->id, 'total' => $cart->getTotal()]);
 
             foreach ($cart->all() as $k => $item) {
                 $order->items()->create([

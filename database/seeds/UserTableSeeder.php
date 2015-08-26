@@ -19,8 +19,9 @@ class UserTableSeeder extends Seeder
             'name' => 'Bruno Castro',
             'email' => 'miroldols@gmail.com',
             'password' => Hash::make(123456),
+            'is_admin' => 1
         ]);
 
-        factory('CodeCommerce\User',10)->create();
+        //factory('CodeCommerce\User',10)->create();
     }
 }
