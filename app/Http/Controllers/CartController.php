@@ -6,7 +6,6 @@ use CodeCommerce\Cart;
 use CodeCommerce\Http\Requests;
 use CodeCommerce\Http\Requests\CartRequest;
 use CodeCommerce\Product;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
 class CartController extends Controller
@@ -19,7 +18,6 @@ class CartController extends Controller
     public function __construct(Cart $cart)
     {
         $this->cart = $cart;
-        $this->middleware('auth');
     }
 
     public function index()
