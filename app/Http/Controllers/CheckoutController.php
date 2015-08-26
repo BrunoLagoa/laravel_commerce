@@ -2,6 +2,7 @@
 
 namespace CodeCommerce\Http\Controllers;
 
+use CodeCommerce\Category;
 use CodeCommerce\Order;
 use CodeCommerce\OrderItem;
 use Illuminate\Http\Request;
@@ -20,6 +21,7 @@ class CheckoutController extends Controller
 
     public function place(Order $orderModel, OrderItem $orderItem)
     {
+
         if (!Session::has('cart')) {
             return false;
         }
@@ -38,8 +40,11 @@ class CheckoutController extends Controller
                 ]);
             }
 
-            dd($order);
-
+            $cart->clear();
+            $categories = Category::all();
+            return view('store.checkout', compact('order','categories'));
         }
+        $categories = Category::all();
+        return view('store.checkout', ['cart'=>'empty', 'categories'=>$categories]);
     }
 }
