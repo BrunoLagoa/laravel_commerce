@@ -13,7 +13,7 @@ class AddUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->boolean('is_admin')->after('email');
+            $table->boolean('is_admin')->after('email')->default(0);
         });
     }
 
