@@ -4,8 +4,8 @@
     <section id="cart_items">
         <div class="container">
             @if($cart->getTotal() == 0)
-                <div class="alert alert-warning" style="margin-bottom: 50px">
-                    Nenhum produto cadastrado.
+                <div class="alert alert-info" style="margin-bottom: 50px">
+                    Nenhum produto no carrinho de compras.
                 </div>
             @else
                 <div class="table-condensed cart_info">
