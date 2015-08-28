@@ -42,7 +42,9 @@ class CheckoutController extends Controller
             }
 
             $cart->clear();
-            event(new CheckoutEvent());
+
+            event(new CheckoutEvent(Auth::user(), $order));
+
             return view('store.checkout', compact('order','categories'));
         }
         return view('store.checkout', ['cart'=>'empty', 'categories'=>$categories]);

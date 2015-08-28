@@ -149,6 +149,14 @@ admin/products, admin/categories
  - Caso o usuário não esteja logado, redirecione-o para a página de login antes do mesmo finalizar o pedido.
  - Também você deverá adicionar um novo campo na tabela de usuários chamado: is_admin (boolean).
  - A partir de agora, apenas usuários logados e com is_admin=1 poderão acessar a área administrativa de nossa loja.
+
+## Fase 14 do projeto
+<b>CHECKOUT E PEDIDOS</b>
+ 
+ - Agora que você já aprendeu a realizar o processo de checkout, realize as seguintes tarefas:
+ - No momento do registro de um novo usuário, crie os campos adicionais para que seu endereço completo seja preenchido.
+ - Na listagem de pedidos contratados pelo usuário, traga o status correto ao invés de trabalharmos com os números inteiros.
+ - Crie na área administrativa uma página com a listagem de todos os pedidos realizados e a possibilidade de editar o status dos mesmos.
  
 ------------------------------------------------------------------------------------------
 [Bruno Castro](http://www.bhzautomacao.com.br) - Development

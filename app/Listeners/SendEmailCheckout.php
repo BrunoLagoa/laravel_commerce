@@ -5,6 +5,7 @@ namespace CodeCommerce\Listeners;
 use CodeCommerce\Events\CheckoutEvent;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Support\Facades\Mail;
 
 class SendEmailCheckout
 {
@@ -26,6 +27,16 @@ class SendEmailCheckout
      */
     public function handle(CheckoutEvent $event)
     {
-        echo "Evento disparado!";
+        $user = $event->getUser();
+        $order = $event->getOrder();
+
+        Mail::send('emails.reminder_purchase', compact('user', 'order'), function($message) use ($order, $user) {
+
+            $message->from('contato@codecommerce.com', 'Code Commerce');
+            $message->to($user->email, $user->name);
+            $message->subject('Code Commerce | Recebemos seu Pedido');
+
+        });
+
     }
 }
