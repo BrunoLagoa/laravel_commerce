@@ -3,6 +3,7 @@
 namespace CodeCommerce\Http\Controllers;
 
 use CodeCommerce\Category;
+use CodeCommerce\Events\CheckoutEvent;
 use CodeCommerce\Order;
 use CodeCommerce\OrderItem;
 use Illuminate\Http\Request;
@@ -27,7 +28,7 @@ class CheckoutController extends Controller
         }
 
         $cart = Session::get('cart');
-
+        $categories = Category::all();
         if ($cart->getTotal() > 0) {
 
             $order = $orderModel->create(['user_id' => Auth::user()->id, 'total' => $cart->getTotal()]);
@@ -41,10 +42,9 @@ class CheckoutController extends Controller
             }
 
             $cart->clear();
-            $categories = Category::all();
+            event(new CheckoutEvent());
             return view('store.checkout', compact('order','categories'));
         }
-        $categories = Category::all();
         return view('store.checkout', ['cart'=>'empty', 'categories'=>$categories]);
     }
 }
