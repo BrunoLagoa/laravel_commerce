@@ -26,6 +26,6 @@ class SendEmailCheckout
      */
     public function handle(CheckoutEvent $event)
     {
-        //
+        echo "Evento disparado!";
     }
 }
