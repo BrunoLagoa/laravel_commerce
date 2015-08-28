@@ -23,8 +23,6 @@ class CheckoutEvent extends Event
         $this->order = $order;
     }
 
-
-
     /**
      * Get the channels the event should be broadcast on.
      *

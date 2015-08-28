@@ -30,7 +30,10 @@ Route::group(['middleware'=>'auth'], function() {
 //Route::get('exemplo', 'WelcomeController@exemplo');
 Route::get('home', 'HomeController@index');
 
-
+Route::get('evento', function() {
+   // \Illuminate\Support\Facades\Event::fire(new CodeCommerce\Events\CheckoutEvent());
+    event(new CodeCommerce\Events\CheckoutEvent());
+});
 
 Route::group(['prefix' => 'admin', 'middleware'=>'auth_admin','where' => ['id' => '[0-9]+']], function() {
     Route::group(['prefix' => 'categories'], function() {
