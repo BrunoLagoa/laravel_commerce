@@ -33,8 +33,7 @@ class CartController extends Controller
         $cart = $this->getCart();
 
         $product = Product::find($id);
-        $cart->add($id, $product->name, $product->price);
-
+        $cart->add($id, $product->name, $product->price, $product->images->first()->id, $product->images->first()->extension);
         Session::set('cart', $cart);
 
         return redirect()->route('cart');

@@ -21,6 +21,7 @@ class CheckoutEvent extends Event
     {
         $this->user = $user;
         $this->order = $order;
+
     }
 
     /**

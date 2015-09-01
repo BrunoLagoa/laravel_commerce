@@ -21,10 +21,18 @@ Route::group(['prefix' => ''], function () {
     Route::post('cart/update/{id}', ['as' => 'cart.update', 'uses' => 'CartController@update']);
 });
 
-// Tem que estar autenticado
-Route::group(['middleware'=>'auth'], function() {
-    Route::get('checkout/placeOrder', ['as' => 'checkout.place', 'uses' => 'CheckoutController@place']);
-    Route::get('account/orders', ['as' => 'account.orders', 'uses' => 'AccountController@orders']);
+// ACCOUNT
+Route::group(['prefix' => 'account',  'where' => ['id' => '[0-9]+']], function(){
+    get('', ['as' => 'account', 'uses' => 'AccountController@index']);
+    get('/orders', ['as' => 'account_orders', 'uses' => 'AccountController@orders']);
+    get('/address', ['as' => 'account_address', 'uses' => 'AccountController@address']);
+    get('/address/new', ['as' => 'account_address_new', 'uses' => 'AccountController@addressnew']);
+    get('/address/{id}/edit',['as'=>'account_address_edit','uses'=>'AccountController@edit']);
+    put('/address/{id}/update',['as'=>'account_address_update','uses'=>'AccountController@update']);
+    get('/address/{id}/destroy',['as'=>'account_address_destroy','uses'=>'AccountController@destroy']);
+    post('/register/address', ['as' => 'account_address_register', 'uses' => 'AccountController@registerAddress']);
+    get('checkout/placeOrder', ['as' => 'checkout.place', 'uses' => 'CheckoutController@place']);
+    get('account/orders', ['as' => 'account.orders', 'uses' => 'AccountController@orders']);
 });
 
 //Route::get('exemplo', 'WelcomeController@exemplo');
@@ -35,7 +43,11 @@ Route::get('evento', function() {
     event(new CodeCommerce\Events\CheckoutEvent());
 });
 
-Route::group(['prefix' => 'admin', 'middleware'=>'auth_admin','where' => ['id' => '[0-9]+']], function() {
+Route::group(['prefix' => 'admin', 'middleware'=>'auth_admin', 'where' => ['id' => '[0-9]+']], function() {
+    Route::get('', ['as' => 'admin', 'uses' => 'CategoriesController@index']);
+    get('/orders', ['as' => 'orders', 'uses' => 'OrderController@index']);
+    get('/orders/{id}', ['as' => 'order_edit', 'uses' => 'OrderController@edit']);
+    put('/orders/{id}/update', ['as' => 'order_update', 'uses' => 'OrderController@update']);
     Route::group(['prefix' => 'categories'], function() {
         Route::get('', ['as' => 'categories', 'uses' => 'CategoriesController@index']);
         Route::post('', ['as' => 'categories.store', 'uses' => 'CategoriesController@store']);

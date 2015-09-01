@@ -17,7 +17,7 @@ class ProductsController extends Controller
 
     public function __construct(Product $productModel)
     {
-        // $this->middleware('auth'); - verifica se o usuari esta logado
+        // $this->middleware('auth'); - verifica se o usuario esta logado
         $this->productModel = $productModel;
     }
 

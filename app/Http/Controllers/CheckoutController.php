@@ -17,7 +17,7 @@ class CheckoutController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        //$this->middleware('auth_admin');
     }
 
     public function place(Order $orderModel, OrderItem $orderItem)
@@ -29,6 +29,11 @@ class CheckoutController extends Controller
 
         $cart = Session::get('cart');
         $categories = Category::all();
+
+        if(count(Auth::user()->address) <= 0) {
+            return redirect()->route('account_address')->with('address_exist', 'Você precisa ter um endereço de entrega antes de finalizar compra!');
+        }
+
         if ($cart->getTotal() > 0) {
 
             $order = $orderModel->create(['user_id' => Auth::user()->id, 'total' => $cart->getTotal()]);
