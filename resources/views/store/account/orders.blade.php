@@ -3,7 +3,7 @@
     @section('data')
 <div class="col-sm-9">
     <div class="left-sidebar">
-        <div class="panel-group category-products" id="accordian"><!--category-productsr-->
+        <div class="panel-group">
         <h3>Meus Pedidos</h3>
         @if(!count($orders))
             <div class="alert alert-info">Nenhum pedido cadastrado em sua conta.</div>

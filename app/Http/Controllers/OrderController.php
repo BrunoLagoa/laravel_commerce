@@ -17,7 +17,7 @@ class OrderController extends Controller
 
     public function index()
     {
-        $orders = $this->order->all();
+        $orders = $this->order->paginate(10);
 
         return view('order.index', compact('orders'));
     }
@@ -33,8 +33,6 @@ class OrderController extends Controller
     {
         $this->order->find($id)->update($orderRequest->all());
 
-        $orders = $this->order->all();
-
-        return view('order.index', compact('orders'));
+        return redirect()->route('orders');
     }
 }
