@@ -80,4 +80,17 @@ class AccountController extends Controller
         return redirect()->route('account_address');
     }
 
+    public function perfil($id)
+    {
+        $user = Auth::user()->find($id);
+        return view('store.account.perfil', compact('user'));
+    }
+
+    public function perfilUpdate(Requests\PerfilRequest $perfilRequest, $id)
+    {
+        Auth::user()->find($id)->update($perfilRequest->all());
+
+        return redirect()->route('account')->with('account_perfil_success', 'Dados do perfil atualizado!');
+    }
+
 }

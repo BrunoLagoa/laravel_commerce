@@ -60,7 +60,7 @@
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="menu"
                                        aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
                                     <ul class="dropdown-menu" role="menu">
-                                        <li><a href="{{ url('/account') }}">Minha Conta</a></li>
+                                        <li><a href="{{ route('account_perfil', ['id' => \Illuminate\Support\Facades\Auth::user()->id]) }}">Perfil</a></li>
                                         <br />
                                         <li><a href="{{ url('/auth/logout') }}">Logout</a></li>
                                     </ul>

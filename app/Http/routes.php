@@ -33,6 +33,8 @@ Route::group(['prefix' => 'account',  'where' => ['id' => '[0-9]+']], function()
     post('/register/address', ['as' => 'account_address_register', 'uses' => 'AccountController@registerAddress']);
     get('checkout/placeOrder', ['as' => 'checkout.place', 'uses' => 'CheckoutController@place']);
     get('account/orders', ['as' => 'account.orders', 'uses' => 'AccountController@orders']);
+    get('/perfil/{id}/edit', ['as' => 'account_perfil', 'uses' => 'AccountController@perfil']);
+    put('/perfil/{id}/update',['as'=>'account_perfil_update','uses'=>'AccountController@perfilUpdate']);
 });
 
 //Route::get('exemplo', 'WelcomeController@exemplo');
