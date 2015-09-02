@@ -146,6 +146,11 @@ return [
         CodeCommerce\Providers\EventServiceProvider::class,
         CodeCommerce\Providers\RouteServiceProvider::class,
 
+        /*
+         * Application PagSeguro
+         */
+        LaravelPagseguro\LaravelPagseguroServiceProvider::class
+
     ],
 
     /*
