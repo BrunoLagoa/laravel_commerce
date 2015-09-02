@@ -22,7 +22,7 @@ Route::group(['prefix' => ''], function () {
 });
 
 // ACCOUNT
-Route::group(['prefix' => 'account',  'where' => ['id' => '[0-9]+']], function(){
+Route::group(['prefix' => 'account', 'middleware'=>'auth', 'where' => ['id' => '[0-9]+']], function(){
     get('', ['as' => 'account', 'uses' => 'AccountController@index']);
     get('/orders', ['as' => 'account_orders', 'uses' => 'AccountController@orders']);
     get('/address', ['as' => 'account_address', 'uses' => 'AccountController@address']);
