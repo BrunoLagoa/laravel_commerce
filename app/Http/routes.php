@@ -37,8 +37,10 @@ Route::group(['prefix' => 'account', 'middleware'=>'auth', 'where' => ['id' => '
     put('/perfil/{id}/update',['as'=>'account_perfil_update','uses'=>'AccountController@perfilUpdate']);
 });
 
+Route::get('test', 'CheckoutController@test');
 //Route::get('exemplo', 'WelcomeController@exemplo');
 Route::get('home', 'HomeController@index');
+
 
 Route::get('evento', function() {
    // \Illuminate\Support\Facades\Event::fire(new CodeCommerce\Events\CheckoutEvent());
