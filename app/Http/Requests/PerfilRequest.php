@@ -25,7 +25,7 @@ class PerfilRequest extends Request
     {
         return [
             'name' => 'required',
-            'email' => 'required',
+            'email' => 'required|email'
         ];
     }
 }

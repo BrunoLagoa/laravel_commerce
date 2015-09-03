@@ -2,8 +2,16 @@
 
 @section('data')
 
-    <h3>Dados de Entrega</h3>
+    <h3>Dados do Perfil</h3>
+    @if($errors->any())
 
+        <ul class="alert alert-danger">
+            @foreach($errors->all() as $error)
+                <li style="margin-left: 20px">{{ $error }}</li>
+            @endforeach
+        </ul>
+
+    @endif
     <div class="col-lg-9">
         @if (session('address_exist'))
             <div class="alert alert-danger">

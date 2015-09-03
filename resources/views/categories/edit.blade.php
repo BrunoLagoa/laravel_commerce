@@ -14,17 +14,9 @@
 
         @endif
 
-        {!! Form::open(['route'=>['categories.update', $category->id], 'method'=>'put']) !!}
+        {!! Form::model($category, ['route'=>['categories.update', $category->id], 'method'=>'put']) !!}
 
-        <div class="form-group">
-
-            {!! Form::label('name', 'Name:') !!}
-            {!! Form::text('name', $category->name, ['class'=>'form-control']) !!}
-            <br />
-            {!! Form::label('description', 'Description:') !!}
-            {!! Form::textarea('description', $category->description, ['class'=>'form-control']) !!}
-
-        </div>
+        @include('categories._form')
 
         <div class="form-group">
 

@@ -25,7 +25,7 @@
                         @forelse($cart->all() as $k=>$item)
                             <tr>
                                 <td class="cart_product" style="margin-right: 8px">
-                                    @if($item['image'] === 'no-img')
+                                    @if(isset($item['image']) === 'no-img')
                                         <a href="{{ route('store.product', ['id'=>$k]) }}">
                                             <img src="{{ url('images/no-img.jpg') }}" alt="" width="60px" />
                                         </a>

@@ -78,8 +78,14 @@ class UsersController extends Controller
     public function update(Request $request, $id)
     {
         $input = $request->all();
-        $input['password'] = Hash::make($input['password']);
-        $this->userModel->findOrNew($id)->update($input);
+
+        if ($input['password'] == null) {
+            $this->userModel->findOrNew($id)->update($input['name'],$input['email']);
+        }else{
+            $input['password'] = Hash::make($input['password']);
+            $this->userModel->findOrNew($id)->update($input);
+        }
+
         return redirect()->route('users');
     }
 

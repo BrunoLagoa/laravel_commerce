@@ -25,6 +25,8 @@ class CartController extends Controller
         if (!Session::has('cart')) {
             $cart = Session::set('cart', $this->cart);
         }
+
+        //dd(Session::get('cart'));
         return view('store.cart', ['cart' => Session::get('cart')]);
     }
 

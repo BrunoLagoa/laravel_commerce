@@ -1,7 +1,7 @@
 @extends('store.account.index')
 
     @section('data')
-<div class="col-sm-9">
+<div class="col-sm-">
     <div class="left-sidebar">
         <div class="panel-group">
         <h3>Meus Pedidos</h3>

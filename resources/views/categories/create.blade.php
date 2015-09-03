@@ -16,15 +16,7 @@
 
         {!! Form::open(['url'=>'admin\categories']) !!}
 
-        <div class="form-group">
-
-            {!! Form::label('name', 'Name:') !!}
-            {!! Form::text('name', null, ['class'=>'form-control']) !!}
-            <br />
-            {!! Form::label('description', 'Description:') !!}
-            {!! Form::textarea('description', null, ['class'=>'form-control']) !!}
-
-        </div>
+        @include('categories._form')
 
         <div class="form-group">
 

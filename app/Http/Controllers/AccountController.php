@@ -7,6 +7,7 @@ use CodeCommerce\Http\Requests;
 use CodeCommerce\Order;
 use CodeCommerce\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class AccountController extends Controller
 {
@@ -88,7 +89,14 @@ class AccountController extends Controller
 
     public function perfilUpdate(Requests\PerfilRequest $perfilRequest, $id)
     {
-        Auth::user()->find($id)->update($perfilRequest->all());
+        $input = $perfilRequest->all();
+
+        if ($input['password'] == null) {
+            Auth::user()->find($id)->update($input['name'],$input['email']);
+        }else{
+            $input['password'] = Hash::make($input['password']);
+            Auth::user()->find($id)->update($input);
+        }
 
         return redirect()->route('account')->with('account_perfil_success', 'Dados do perfil atualizado!');
     }
