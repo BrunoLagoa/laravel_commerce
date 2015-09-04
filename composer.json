@@ -11,8 +11,7 @@
         "fzaninotto/Faker": "^1.5",
         "filp/whoops": "~1.0",
         "guzzlehttp/guzzle": "~5.3|~6.0",
-        "wesleywillians/laravel-pagseguro": "dev-master",
-        "fzaninotto/faker": "~1.4"
+        "wesleywillians/laravel-pagseguro": "dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
