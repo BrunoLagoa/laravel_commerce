@@ -47,6 +47,9 @@ Route::get('evento', function() {
     event(new CodeCommerce\Events\CheckoutEvent());
 });
 
+Route::post('payment_status', ['as' => 'payment_status', 'uses' => 'CheckoutController@payment_status']);
+
+
 Route::group(['prefix' => 'admin', 'middleware'=>'auth_admin', 'where' => ['id' => '[0-9]+']], function() {
     Route::get('', ['as' => 'admin', 'uses' => 'CategoriesController@index']);
     get('/orders', ['as' => 'orders', 'uses' => 'OrderController@index']);
